@@ -14,4 +14,10 @@
 * python3 manage.py startapp app_name
 * views for each app should be in views.py in each app folder
 * html files are in templates folder under each app and inside templates folder we would create another folder with the same name as app and put html files in there.
-* we have to go to settings.py and add our app in INSTALLED_APPS list
+* we have to go to settings.py and add our app in INSTALLED_APPS list, we don't need to add templates here because we use app
+
+### Migration
+* in order to add the model we created to database, we need to run migration, quit server before running any migration
+* to migrate for pre-installed apps at the very beginning: python3 manage.py migrate
+* to make migration file whenever we've changed the model: python3 manage.py makemigrations
+* you'll see migration file, and then migrate: python3 manage.py migrate
