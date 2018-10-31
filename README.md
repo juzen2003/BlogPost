@@ -21,3 +21,9 @@
 * to migrate for pre-installed apps at the very beginning: python3 manage.py migrate
 * to make migration file whenever we've changed the model: python3 manage.py makemigrations
 * you'll see migration file, and then migrate: python3 manage.py migrate
+
+### Admin interface
+* django by default uses SQLite
+* quit server & create superuser: python3 manage.py createsuperuser
+* and register the model
+* login admin interface, it allows us to manage the data of registered model inside database
