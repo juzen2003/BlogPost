@@ -12,3 +12,11 @@ class Post(models.Model):
     # display title in the admin gui
     def __str__(self):
         return self.title
+
+    # strftime is a python function to better display time
+    def pub_date_pretty(self):
+        return self.pub_date.strftime('%b %e %Y')
+
+    # display only first 100 character in summary, not all posts body
+    def summary(self):
+        return self.body[:100]

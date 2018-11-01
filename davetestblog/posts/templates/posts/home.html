@@ -3,4 +3,12 @@
 <h2>Latest Posts</h2>
 {% for post in posts %}
 {{ post.title }}
+<br>
+{{ post.pub_date_pretty }}
+<br>
+<img src='{{ post.image.url }}' style="width:300px;" />
+<br>
+{{ post.summary }}
+<br>
+<br>
 {% endfor %}

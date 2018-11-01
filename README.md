@@ -27,3 +27,6 @@
 * quit server & create superuser: python3 manage.py createsuperuser
 * and register the model
 * login admin interface, it allows us to manage the data of registered model inside database
+
+### QuerySet API
+* use QuerySet API to query model entries in database in views.py and passed in those info in dictionary to display in html
