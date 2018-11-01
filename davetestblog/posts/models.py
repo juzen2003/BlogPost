@@ -4,7 +4,8 @@ from django.db import models
 # model is singular
 class Post(models.Model):
     title = models.CharField(max_length=255)
-    pub_date = models.DateField()
+    # if we use DateField here then it would only have date but no time for data input
+    pub_date = models.DateTimeField()
     # blank=True makes image optional, not required
     image = models.ImageField(upload_to='media/', blank=True)
     body = models.TextField()
