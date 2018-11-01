@@ -2,7 +2,9 @@
 <br>
 {{ post.pub_date_pretty }}
 <br>
-<img src='{{ post.image.url }}' style="width:300px;" />
+<img src="{{ post.image.url }}" style="width:300px;" />
 <br>
 {{ post.body }}
+<br>
+<a href="{% url 'home' %}">Home</a>
 <br>

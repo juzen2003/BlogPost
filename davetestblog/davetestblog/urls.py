@@ -24,7 +24,7 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     # url(r'^$', views.home)
-    path('', views.home),
+    path('', views.home, name='home'),
     # different ways to define url
     # url(r'^posts/(?P<post_id>[0-9]+)/$', views.posts_detail),
     # re_path(r'^posts/(?P<post_id>[0-9]+)/$', views.posts_detail),
