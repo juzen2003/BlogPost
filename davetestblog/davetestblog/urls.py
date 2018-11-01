@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
 from posts import views
 from django.conf.urls import url
 # for showing static images
@@ -24,6 +24,11 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     # url(r'^$', views.home)
-    path('', views.home)
+    path('', views.home),
+    # different ways to define url
+    # url(r'^posts/(?P<post_id>[0-9]+)/$', views.posts_detail),
+    # re_path(r'^posts/(?P<post_id>[0-9]+)/$', views.posts_detail),
+    path('posts/<int:post_id>/', views.posts_detail, name='post_detail'),
+
     # static part is for displaying static image on the page, define the path in settings
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -2,11 +2,12 @@
 
 <h2>Latest Posts</h2>
 {% for post in posts %}
-{{ post.title }}
+<!--  has to pass in post.id into post_detail url since it's expecting post_id in it's url -->
+<a href='{% url "post_detail" post.id %}'>{{ post.title }}</a>
 <br>
 {{ post.pub_date_pretty }}
 <br>
-<img src='{{ post.image.url }}' style="width:300px;" />
+<img src='{{ post.image.url }}' style='width:300px;'' />
 <br>
 {{ post.summary }}
 <br>

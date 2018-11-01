@@ -30,3 +30,13 @@
 
 ### QuerySet API
 * use QuerySet API to query model entries in database in views.py and passed in those info in dictionary to display in html
+* for the lookup parameters passed into QuerySet API (kwargs), we can refer to https://docs.djangoproject.com/en/2.1/ref/models/querysets/#id4 for field lookup
+
+### Regex recap
+* ^: begin of string
+* $: end of string
+
+### views.py, models.py, urls.py
+* urls.py: defined the url path to the corresponding view in views.py
+* views.py: defined each view to render to the html file in templates, data (or models) are passed into html using dictionary
+* models.py: defined the info (or schema) we would like to migrate to database
