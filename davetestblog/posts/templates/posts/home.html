@@ -11,8 +11,23 @@
     <title>Dave's Test Blog</title>
   </head>
   <body>
-    <h1>Welcome to Dave's test blog</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Dave's Blog</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- the id here just needs to match the data-target at the collapse button up there -->
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="#">About <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#">Github</a>
+          <a class="nav-item nav-link" href="#">Site</a>
+          <a class="nav-item nav-link" href="#">Surprise</a>
+        </div>
+      </div>
+    </nav>
 
+    <h1>Welcome to Dave's test blog</h1>
     <h2>Latest Posts</h2>
     {% for post in posts %}
     <!--  has to pass in post.id into post_detail url since it's expecting post_id in it's url -->
