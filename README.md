@@ -47,3 +47,9 @@
 
 ### Disqus
 * use disqus to build the comment system, refer to: https://disqus.com/
+
+### Just notes when hosting to public
+* https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-16-04
+* Nginx would link user connecting to our site to Gunicorn server which hosts our django project
+* django -> Gunicorn -> Nginx
+* once we setup everything, then we upload our code using FileZilla and use the virtual env on server for the project just like what we did at local machine
