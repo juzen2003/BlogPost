@@ -31,6 +31,13 @@
 
     <div class="container">
       <h1 class="text-center">Welcome to Dave's test blog</h1>
+
+      <!-- we need this for loading icon or static images -->
+      <div class="text-center">
+        {% load static %}
+        <img src="{% static 'posts/home.jpg' %}" class="img-fluid" style="max-height:500px;" alt="My image">
+      </div>
+
       <h2>Latest Posts</h2>
       <hr>
       {% for post in posts %}
@@ -38,7 +45,9 @@
         <a href="{% url 'post_detail' post.id %}"><h3>{{ post.title }}</h3></a>
 
         <h4>{% octicon 'clock' class="large" %} {{ post.pub_date_pretty }}</h4>
-        <img src="{{ post.image.url }}" class="img-responsive center-block" style="max-height:300px;" />
+        <div class="text-center">
+          <img src="{{ post.image.url }}" class="img-fluid" style="max-height:300px;" />
+        </div>
         <p>{{ post.summary }}</p>
       {% endfor %}
     </div>

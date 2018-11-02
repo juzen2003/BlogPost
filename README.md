@@ -40,3 +40,7 @@
 * urls.py: defined the url path to the corresponding view in views.py
 * views.py: defined each view to render to the html file in templates, data (or models) are passed into html using dictionary
 * models.py: defined the info (or schema) we would like to migrate to database
+
+### Bootstrap 4
+* responsive image refer to: https://getbootstrap.com/docs/4.1/content/images/#responsive-images
+* use img-fluid and a outer div with text-center instead of a class with img-responsive center-block
