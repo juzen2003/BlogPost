@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, re_path
-from posts import views
+import posts.views
+import sitepages.views
 from django.conf.urls import url
 # for showing static images
 from django.conf.urls.static import static
@@ -24,11 +25,12 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     # url(r'^$', views.home)
-    path('', views.home, name='home'),
+    path('', posts.views.home, name='home'),
     # different ways to define url
-    # url(r'^posts/(?P<post_id>[0-9]+)/$', views.posts_detail),
-    # re_path(r'^posts/(?P<post_id>[0-9]+)/$', views.posts_detail),
-    path('posts/<int:post_id>/', views.posts_detail, name='post_detail'),
+    # url(r'^posts/(?P<post_id>[0-9]+)/$', posts.views.posts_detail),
+    # re_path(r'^posts/(?P<post_id>[0-9]+)/$', posts.views.posts_detail),
+    path('posts/<int:post_id>/', posts.views.posts_detail, name='post_detail'),
+    path('about/', sitepages.views.about, name='about'),
 
     # static part is for displaying static image on the page, define the path in settings
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -20,6 +20,7 @@
           <!-- the id here just needs to match the data-target at the collapse button up there -->
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
+              <a class="nav-item nav-link" href="{% url 'about' %}">About</a>
               <a class="nav-item nav-link" href="https://github.com/juzen2003">Github</a>
               <a class="nav-item nav-link" href="http://easynote.herokuapp.com/#/">Site</a>
               <a class="nav-item nav-link" href="https://juzen2003.github.io/">Surprise</a>
@@ -35,7 +36,7 @@
       <!-- we need this for loading icon or static images -->
       <div class="text-center">
         {% load static %}
-        <img src="{% static 'posts/home.jpg' %}" class="img-fluid" style="max-height:500px;" alt="My image">
+        <img src="{% static 'posts/home.jpg' %}" class="img-fluid" style="max-height:500px;" alt="home image">
       </div>
 
       <h2>Latest Posts</h2>
