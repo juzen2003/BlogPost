@@ -44,3 +44,6 @@
 ### Bootstrap 4
 * responsive image refer to: https://getbootstrap.com/docs/4.1/content/images/#responsive-images
 * use img-fluid and a outer div with text-center instead of a class with img-responsive center-block
+
+### Disqus
+* use disqus to build the comment system, refer to: https://disqus.com/
